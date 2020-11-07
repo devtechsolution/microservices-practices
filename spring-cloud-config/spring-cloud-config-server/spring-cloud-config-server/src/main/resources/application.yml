@@ -7,8 +7,17 @@ spring:
       server:
         git:
           uri: https://github.com/devtechsolution/cloud-config-props
-      label: main
+        health: 
+          enabled: true
+                    
+      label: master
       name: config-server
+      
+management:
+  endpoint:
+    health:
+      show-details: always 
+     
       
       
           
