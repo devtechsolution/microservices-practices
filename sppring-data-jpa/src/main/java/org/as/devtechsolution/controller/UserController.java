@@ -28,8 +28,9 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/users")
-    public List<User> getAllUsers(){
+    public List<User> getAllUsers() throws InterruptedException{
         logger.info("getting users..");
+        //Thread.sleep(000);
         return userService.findAllUsers();
     }
 
